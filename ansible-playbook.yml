@@ -11,6 +11,10 @@
 
   - name : Start Docker Service
     command : sudo systemctl start docker
+  
+  - name : Pull Docker image
+    command : docker pull revati21/bankapp-eta-app
+
 
   - name: Deploy Docker Container
     command: docker run -itd -p 8084:8081 revati21/bankapp-eta-app
